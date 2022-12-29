@@ -1,0 +1,92 @@
+#addMore,
+#downloadPDF{
+    color: aliceblue;
+    background-color: black;
+    font-size: x-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 3px aliceblue solid;
+    border-radius: 30%;
+    size: 1%;
+    padding: 0.6%;
+    width: max-content;
+    position: fixed;
+    left: 43%;
+    top: 90%;
+}
+
+#downloadPDF{
+    left: 58%;
+}
+#addMore:hover,
+#downloadPDF:hover{
+    color: black;
+    background-color: aliceblue;
+    border: 4px black solid;
+    font-weight: 500;
+}
+
+.imageContainer{
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+}
+
+.image{
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    border: 2px rgb(5, 5, 5) solid;
+    position: relative;
+    top: -8%;
+    box-shadow: 1px 1px 4px 3px rgb(29, 28, 28);
+}
+
+.image:hover{
+    width: 350px;
+    height: 350px;
+    border: 4px rgb(5, 5, 5) solid;
+    box-shadow: 2px 2px 6px 4px rgb(29, 28, 28);
+}
+
+.redCross{
+    width: 7%;
+    position: relative;
+    left: 92%;
+    top: 3%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.redCross:hover{
+    opacity: 1;
+}
+
+body{
+    background-color: #5256ad;
+}
+
+#dropzone {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    color: #ccc;
+}
+
+#h {
+    display: none;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
