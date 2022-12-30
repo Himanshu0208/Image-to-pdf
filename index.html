@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image To PDF</title>
+    <title>PDF Master</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="previewStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
     
 </head>
@@ -27,15 +28,16 @@
         </div>
     </div>
 
-    <div style="margin-top: 1px;position: absolute;min-width: 100%;top: 5px;">
+    <div style="width:100vw; height:100vh;">
         <h1 class="title" id="h">Pdf Master</h1>
         <div id="container2">
             <div id="container"></div>
             <input type="file" name="input-image" id="inputFile" onclick="this.value = null;"  accept="image/jpeg, image/png, image/jpg" hidden>
-            <div class="button-container">
-                <div id="addMore">+add more</div>
-                <div id="downloadPDF" onclick="makePdf();">Download PDF</div>
-            </div>
+
+            <!-- <div class="buttonContainer"> -->
+                <div id="addMore"><i class="material-icons" style="font-weight:bold">add</i>Add</div>
+                <div id="downloadPDF" onclick="makePdf();"><i class="material-icons" style="font-weight:bold">download</i>Download</div>
+            <!-- </div> -->
         </div>
     </div>
     <!-- <script src="previewScript.js" defer></script> -->
