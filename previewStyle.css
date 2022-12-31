@@ -114,6 +114,16 @@ body{
         top: 80%;
         left: 30%;
     }
+    .image{
+        width: 60vw;
+        height: 60vw;
+    }
+    .imageContainer{
+        width: 60vw;
+        height: 60vw;
+        margin-bottom: 4vw;
+        margin-left: 20vw;
+    }
     
 }
 
@@ -136,3 +146,20 @@ body{
     }
 }
 
+@media only screen and (min-width:481px) and (max-width:1000px){
+    .image{
+        width:40vw;
+        height: 40vw;
+        /* margin-left: 8vw; */
+    }
+    .imageContainer{
+        width:fit-content;
+        height: fit-content;
+        margin-bottom: 4vw;
+    }
+    .redCross{
+        position: relative;
+        left: 85%;
+        margin-bottom: 77%;
+    }
+}

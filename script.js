@@ -7,7 +7,15 @@ let row = 0;
 let coloumn = 0;
 let count = 0;
 var delete_count = 0;
-
+const innerWidth = document.documentElement.clientWidth
+var images;
+if (innerWidth < 481) {
+  images = 1
+} else if(innerWidth > 481 && innerWidth < 1000){
+  images = 2
+}else{
+  images = 4
+}
 // handle drag and drop events
 dropzone.addEventListener('dragover', e => {
   e.preventDefault();
@@ -45,7 +53,7 @@ async function handleDrop(files) {
       const file = files[i];
       // do something with the file (e.g. display it, upload it, etc.)
       let read_file = new FileReader();
-      if(row%4 == 0){
+      if(row%images == 0){
         coloumn += 1;
         id = `row${coloumn}`;
         let element= document.createElement('div');
@@ -73,7 +81,6 @@ const input_file = document.getElementById('inputFile');
 const container = document.getElementById('container');
 const addmore = document.getElementById('addMore');
 const download = document.getElementById('downloadPDF')
-// const image_list = []
 
 
 // Delete the image on clicking red cross button
@@ -134,22 +141,26 @@ addmore.addEventListener('click' , function(){
 })
 
 function preview(){
-    console.log("input_file event listner is fiered")
-    // Reading the Selected file
-    let read_file = new FileReader();
+  console.log("input_file event listner is fiered")
 
-    if(row%4 == 0){
-        coloumn += 1;
-        id = `row${coloumn}`;
-        let element= document.createElement('div');
-        element.setAttribute('class','row');
-        element.setAttribute('id',id);
-        container.appendChild(element);
-    }
+console.log(images, innerWidth);
+  // Reading the Selected file
 
-    createImage(id, read_file);
-    read_file.readAsDataURL(this.files[0]);
-    row += 1;
+  let read_file = new FileReader();
+  console.log('images', images);
+  if(row%images == 0){
+    console.log('a');
+      coloumn += 1;
+      id = `row${coloumn}`;
+      let element= document.createElement('div');
+      element.setAttribute('class','row');
+      element.setAttribute('id',id);
+      container.appendChild(element);
+  }
+
+  createImage(id, read_file);
+  read_file.readAsDataURL(this.files[0]);
+  row += 1;
 }
 
 // Taking input on change
