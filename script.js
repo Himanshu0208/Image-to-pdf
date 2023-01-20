@@ -182,8 +182,9 @@ download.addEventListener('click' , function(){
         console.log(height + " " + width);
         console.log(max_height + " " + max_width);
         if(height > max_height && width > max_width){
-            height = max_height;
+//             height = max_height;
             width = max_width;
+            height = width * ratio;
 
         }else if(height > max_height || width > max_width){
             if(height > width){
@@ -201,6 +202,6 @@ download.addEventListener('click' , function(){
     doc.deletePage(image_list.length + 1);
 
     let date = new Date();
-    let pdf_name = `ImgToPdf${date}.pdf`;
+    let pdf_name = `PdfMaster${date}.pdf`;
     doc.save(pdf_name);
 })
