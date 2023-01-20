@@ -185,6 +185,9 @@ download.addEventListener('click' , function(){
 //             height = max_height;
             width = max_width;
             height = width * ratio;
+            if(height > max_height){
+                height = max_height
+            }
 
         }else if(height > max_height || width > max_width){
             if(height > width){
